@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Projects</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome CDN (for icons, optional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <!-- AOS (for fade-up animations) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+    <style>
+      .modal-bg {
+        background: rgba(0,0,0,0.7);
+      }
+      .project-card-bg {
+        background: linear-gradient(to top, rgba(8, 17, 47, 0.12) 0%, transparent 70%);
+        opacity: 0;
+        transition: opacity 0.3s;
+        border-radius: 0.5rem;
+      }
+      .project-card:hover .project-card-bg {
+        opacity: 1;
+      }
+      .carousel-image {
+        transition: opacity 0.5s ease-in-out;
+      }
+      .carousel-indicator {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #ccc;
+        display: inline-block;
+        margin: 0 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .carousel-indicator.active {
+        background-color: #3b82f6;
+      }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 relative" data-aos="fade-up">
+                All Projects
+                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-blue-500 rounded-full"></span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 project-card flex flex-col relative"
+                    data-aos="fade-up"
+                    data-images='["project-1/project1.png","project-1/project1_2.png","project-1/project1_3.png", "project-1/project1_4.png"]'>
+                    <div class="h-48 overflow-hidden">
+                        <img src="project-1/project1.png" alt="Project 1" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105 cursor-pointer">
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between p-6 z-10 relative">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Mini Profile Website</h3>
+                        <p class="text-gray-700 mb-4">A static personal website built with Laravel Blade and Bootstrap, featuring responsive pages like home, biodata, hobbies, and social media to showcase layout and UI styling skills.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Laravel</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Blade</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Bootstrap</span>
+                        </div>
+                        <div class="flex space-x-3 mt-2">
+                            <a href="https://github.com/syitasahara/syitaprofile" target="_blank" rel="noopener" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300 focus:ring-4 focus:ring-blue-200 focus:outline-none">
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/syitasahara/syitaprofile" target="_blank" rel="noopener" class="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300 focus:ring-4 focus:ring-blue-200 focus:outline-none">
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 pointer-events-none z-0 project-card-bg"></div>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 project-card flex flex-col relative"
+                    data-aos="fade-up" data-aos-delay="100"
+                    data-images='["project-2/project2.png","project-2/project2_1.png","project-2/project2_2.png"]'>
+                    <div class="h-48 overflow-hidden">
+                        <img src="project-2/project2.png" alt="Project 2" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105 cursor-pointer">
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between p-6 z-10 relative">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">FoodTrack: Mood-Based Food Recommendation App</h3>
+                        <p class="text-gray-700 mb-4">Designed a mood-based food recommendation UI using Figma, focusing on intuitive and emotional user experience.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">UI/UX</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Figma</span>
+                        </div>
+                        <div class="flex space-x-3 mt-2">
+                            <a href="https://www.figma.com/design/VFenaDLozNEGjGHHyaEm5v/BMC-XPRO?node-id=3-3&p=f&t=Gw7vFsLARRAvUN3n-0" target="_blank" rel="noopener" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300 focus:ring-4 focus:ring-blue-200 focus:outline-none">
+                                Link Figma
+                            </a>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 pointer-events-none z-0 project-card-bg"></div>
+                </div>
+                <!-- Project 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 project-card flex flex-col relative"
+                    data-aos="fade-up" data-aos-delay="200"
+                    data-images='["project-3/project3.png","project-3/project3_1.png","project-3/project3_2.png"]'>
+                    <div class="h-48 overflow-hidden">
+                        <img src="project-3/project3.png" alt="Project 3" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105 cursor-pointer">
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between p-6 z-10 relative">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Mega Daily E-Commerce Landing Page</h3>
+                        <p class="text-gray-700 mb-4">Built a responsive e-commerce landing page using HTML5, CSS3, and JavaScript, focusing on clean layout and user experience.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">HTML5</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">CSS3</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                        </div>
+                        <div class="flex space-x-3 mt-2">
+                            <a href="https://mega-daily.vercel.app/" target="_blank" rel="noopener" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300 focus:ring-4 focus:ring-blue-200 focus:outline-none">
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/syitasahara/LANDING_PAGE.git" target="_blank" rel="noopener" class="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300 focus:ring-4 focus:ring-blue-200 focus:outline-none">
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 pointer-events-none z-0 project-card-bg"></div>
+                </div>
+                <!-- Project 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 project-card flex flex-col relative"
+                    data-aos="fade-up" data-aos-delay="200"
+                    data-images='["project-4/project4.png","project-4/project4_1.png","project-4/project4_2.png"]'>
+                    <div class="h-48 overflow-hidden">
+                        <img src="project-4/project4.png" alt="Project 3" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105 cursor-pointer">
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between p-6 z-10 relative">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Disney+ Clone Streaming Platform</h3>
+                        <p class="text-gray-700 mb-4">Developed a responsive Disney+ front-end clone using React, Vite, Tailwind CSS, and a public movie API for dynamic content.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React.js</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Vite</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
+                        </div>
+                        <div class="flex space-x-3 mt-2">
+                            <a href="https://disney-clone-sepia.vercel.app/" target="_blank" rel="noopener" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300 focus:ring-4 focus:ring-blue-200 focus:outline-none">
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/syitasahara/disney_clone.git" target="_blank" rel="noopener" class="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300 focus:ring-4 focus:ring-blue-200 focus:outline-none">
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 pointer-events-none z-0 project-card-bg"></div>
+                </div>
+                <!-- Project 5 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 project-card flex flex-col relative"
+                    data-aos="fade-up" data-aos-delay="200"
+                    data-images='["project-5/project5.png","project-5/project5_1.png","project-5/project5_2.png", "project-5/project5_3.png"]'>
+                    <div class="h-48 overflow-hidden">
+                        <img src="project-5/project5.png" alt="Project 3" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105 cursor-pointer">
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between p-6 z-10 relative">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Digital Library of Folklore Platform</h3>
+                        <p class="text-gray-700 mb-4">Designed a digital library UI for Indonesian folklore using Figma, focusing on intuitive navigation and visual storytelling.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">UI/UX Design</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Figma</span>
+                        </div>
+                        <div class="flex space-x-3 mt-2">
+                            <a href="https://www.figma.com/design/Fhzl3fNB8NX25SmkChXUHZ/Perpustakaan-Digital-Cerita-Rakyat?node-id=0-1&p=f&t=2bZe9QAO4fcvKDTe-0" target="_blank" rel="noopener" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300 focus:ring-4 focus:ring-blue-200 focus:outline-none">
+                                Link Figma
+                            </a>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 pointer-events-none z-0 project-card-bg"></div>
+                </div>
+                <!-- Project 6 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 project-card flex flex-col relative"
+                    data-aos="fade-up" data-aos-delay="200"
+                    data-images='["project-6/project6.png","project-6/project6_1.png","project-6/project6_2.png", "project-6/project6_3.png"]'>
+                    <div class="h-48 overflow-hidden">
+                        <img src="project-6/project6.png" alt="Project 3" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105 cursor-pointer">
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between p-6 z-10 relative">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">SIPAGAR: Employee Payroll System Website</h3>
+                        <p class="text-gray-700 mb-4">Designed the UI for SIPAGAR, a web-based payroll system, using Figma with a focus on dashboard layout and administrative efficiency.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">UI/UX Design</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Figma</span>
+                        </div>
+                        <div class="flex space-x-3 mt-2">
+                            <a href="https://www.figma.com/design/3kVKiL1Hbt6DNflN4At4h5/Kepegawaian--Community-?node-id=0-1&p=f&t=2bZe9QAO4fcvKDTe-0" target="_blank" rel="noopener" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300 focus:ring-4 focus:ring-blue-200 focus:outline-none">
+                                Link Figma
+                            </a>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 pointer-events-none z-0 project-card-bg"></div>
+                </div>
+                <!-- Project 7 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 project-card flex flex-col relative"
+                    data-aos="fade-up" data-aos-delay="200"
+                    data-images='["project-7/project7.png","project-7/project7_1.png","project-7/project7_2.png", "project-7/project7_3.png", "project-7/project7_4.png", "project-7/project7_5.png", "project-7/project7_6.png", "project-7/project7_7.png"]'>
+                    <div class="h-48 overflow-hidden">
+                        <img src="project-7/project7_2.png" alt="Project 3" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105 cursor-pointer">
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between p-6 z-10 relative">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">KosMe: Boarding House Search & Booking Platform</h3>
+                        <p class="text-gray-700 mb-4">Developed the front-end of KosMe, including login, registration, boarding house details, and payment pages using responsive UI design.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Laravel</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Blade PHP</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Bootstrap</span>
+                        </div>
+                        <div class="flex space-x-3 mt-2">
+                            <a href="https://kosme.my.id/" target="_blank" rel="noopener" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300 focus:ring-4 focus:ring-blue-200 focus:outline-none">
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/deaprima/KosMe-website.git" target="_blank" rel="noopener" class="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300 focus:ring-4 focus:ring-blue-200 focus:outline-none">
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 pointer-events-none z-0 project-card-bg"></div>
+                </div>
+                <!-- Project 8 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 project-card flex flex-col relative"
+                    data-aos="fade-up" data-aos-delay="200"
+                    data-images='["project-8/project8.png","project-8/project8_1.png","project-8/project8_2.png", "project-8/project8_3.png"]'>
+                    <div class="h-48 overflow-hidden">
+                        <img src="project-8/project8.png" alt="Project 3" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105 cursor-pointer">
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between p-6 z-10 relative">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Cyber Edu App</h3>
+                        <p class="text-gray-700 mb-4">Developed CyberEdu, a web app for cybersecurity education with structured content, news API integration, and a responsive UI.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React.js</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Vite</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
+                        </div>
+                        <div class="flex space-x-3 mt-2">
+                            <a href="https://cybersecurity-ten.vercel.app/" target="_blank" rel="noopener" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300 focus:ring-4 focus:ring-blue-200 focus:outline-none">
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/erindaputria/website_cyber.git" target="_blank" rel="noopener" class="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300 focus:ring-4 focus:ring-blue-200 focus:outline-none">
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 pointer-events-none z-0 project-card-bg"></div>
+                </div>
+                <!-- Project 9 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 project-card flex flex-col relative"
+                    data-aos="fade-up" data-aos-delay="200"
+                    data-images='["project-9/project9.png","project-9/project9_1.png","project-9/project9_2.png", "project-9/project9_3.png", "project-9/project9_4.png"]'>
+                    <div class="h-48 overflow-hidden">
+                        <img src="project-9/project9.png" alt="Project 3" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105 cursor-pointer">
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between p-6 z-10 relative">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Gebyar Ilmiah Sains FMIPA Unesa Website</h3>
+                        <p class="text-gray-700 mb-4">Developed the user dashboard front-end for the 13th National Science Festival 2025 website, supporting participants across all education levels in Science and Writing Competitions.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React.js</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Vite</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
+                        </div>
+                        <div class="flex space-x-3 mt-2">
+                            <a href="https://gisunesa.com/" target="_blank" rel="noopener" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300 focus:ring-4 focus:ring-blue-200 focus:outline-none">
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/dawwasinha/gis-frontend.git" target="_blank" rel="noopener" class="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300 focus:ring-4 focus:ring-blue-200 focus:outline-none">
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 pointer-events-none z-0 project-card-bg"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery Modal -->
+    <div id="project-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden modal-bg">
+        <div class="bg-white rounded-lg shadow-lg max-w-4xl w-full mx-4 p-4 relative">
+            <button id="close-modal" class="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-2xl focus:outline-none z-50">
+                &times;
+            </button>
+            
+            <div class="relative overflow-hidden rounded-lg" style="height: 70vh;">
+                <!-- Carousel Images -->
+                <div id="carousel-images" class="h-full w-full flex transition-transform duration-300 ease-in-out">
+                    <!-- Images will be inserted here by JavaScript -->
+                </div>
+                
+                <!-- Navigation Arrows -->
+                <button id="prev-btn" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full w-10 h-10 flex items-center justify-center shadow-md focus:outline-none z-10">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="next-btn" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full w-10 h-10 flex items-center justify-center shadow-md focus:outline-none z-10">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <!-- Indicators -->
+                <div id="carousel-indicators" class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+                    <!-- Indicators will be inserted here by JavaScript -->
+                </div>
+            </div>
+            
+            <div class="mt-4 text-center text-sm text-gray-600">
+                <span id="image-counter">1/3</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true, easing: 'ease-in-out' });
+
+      // Project Gallery Modal
+      let currentImages = [];
+      let currentImageIndex = 0;
+      const modal = document.getElementById('project-modal');
+      const carouselImages = document.getElementById('carousel-images');
+      const carouselIndicators = document.getElementById('carousel-indicators');
+      const imageCounter = document.getElementById('image-counter');
+      
+      // Set up event listeners for all project cards
+      document.querySelectorAll('.project-card').forEach(card => {
+          // Click on the image
+          card.querySelector('img').addEventListener('click', () => openModal(card));
+          
+          // Or click anywhere on the card (optional)
+          // card.addEventListener('click', () => openModal(card));
+      });
+      
+      function openModal(card) {
+          // Get the images from data attribute
+          try {
+              currentImages = JSON.parse(card.getAttribute('data-images'));
+          } catch {
+              currentImages = [card.querySelector('img').src];
+          }
+          
+          currentImageIndex = 0;
+          updateCarousel();
+          
+          // Show modal
+          modal.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+      }
+      
+      function updateCarousel() {
+          // Clear existing content
+          carouselImages.innerHTML = '';
+          carouselIndicators.innerHTML = '';
+          
+          // Add images to carousel
+          currentImages.forEach((src, index) => {
+              const img = document.createElement('img');
+              img.src = src;
+              img.alt = `Project screenshot ${index + 1}`;
+              img.className = 'w-full h-full object-contain flex-shrink-0 carousel-image';
+              img.style.transform = `translateX(${100 * (index - currentImageIndex)}%)`;
+              carouselImages.appendChild(img);
+              
+              // Add indicator
+              const indicator = document.createElement('div');
+              indicator.className = `carousel-indicator ${index === currentImageIndex ? 'active' : ''}`;
+              indicator.dataset.index = index;
+              indicator.addEventListener('click', () => {
+                  currentImageIndex = index;
+                  updateCarousel();
+              });
+              carouselIndicators.appendChild(indicator);
+          });
+          
+          // Update counter
+          imageCounter.textContent = `${currentImageIndex + 1}/${currentImages.length}`;
+          
+          // Update carousel position
+          carouselImages.style.transform = `translateX(-${currentImageIndex * 100}%)`;
+      }
+      
+      // Navigation buttons
+      document.getElementById('prev-btn').addEventListener('click', () => {
+          currentImageIndex = (currentImageIndex - 1 + currentImages.length) % currentImages.length;
+          updateCarousel();
+      });
+      
+      document.getElementById('next-btn').addEventListener('click', () => {
+          currentImageIndex = (currentImageIndex + 1) % currentImages.length;
+          updateCarousel();
+      });
+      
+      // Close modal
+      document.getElementById('close-modal').addEventListener('click', closeModal);
+      modal.addEventListener('click', (e) => {
+          if (e.target === modal) closeModal();
+      });
+      
+      function closeModal() {
+          modal.classList.add('hidden');
+          document.body.style.overflow = 'auto';
+      }
+      
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+          if (!modal.classList.contains('hidden')) {
+              if (e.key === 'ArrowLeft') {
+                  currentImageIndex = (currentImageIndex - 1 + currentImages.length) % currentImages.length;
+                  updateCarousel();
+              } else if (e.key === 'ArrowRight') {
+                  currentImageIndex = (currentImageIndex + 1) % currentImages.length;
+                  updateCarousel();
+              } else if (e.key === 'Escape') {
+                  closeModal();
+              }
+          }
+      });
+    </script>
+</body>
+</html>
